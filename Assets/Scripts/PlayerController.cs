@@ -8,13 +8,19 @@ public class Boundary
     public float xMin, xMax, zMin, zMax;
 }
 public class PlayerController : MonoBehaviour {
-    
+
+    [Header("Movement")]
     public float speed;
     //tilt es giro
     public float tilt;
     public Boundary boundary;
 
     private Rigidbody rig;
+    [Header("Shooting")]
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
+    private float nextFire;
     // Use this for initialization
     private void Awake()
     {
@@ -23,7 +29,12 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
+		if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            //si cambiamos shotSpawn.rotation por Quaternion.identity lo pondremos a 0 la rotacion 
+            Instantiate(shot, shotSpawn.position, Quaternion.identity);
+        }
 
 	}
     private void FixedUpdate()
