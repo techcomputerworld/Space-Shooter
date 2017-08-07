@@ -30,7 +30,7 @@ Explicación de como añadir el fondo a la escena.
 
 ## 5. Moviendo la nave
 
-Añadiendo los scripts para mover la nave por la escena.  
+Añadiendo los scripts para mover la nave por la escena. La velocidad de la nave que se mueve a 1 unidad de movimiento por segundo ahora hay que definir la velocidad.   
 
 
 
