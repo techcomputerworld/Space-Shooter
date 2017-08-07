@@ -14,4 +14,16 @@ Cuando el juego este finalizado pienso desarrollar un juego mucho mejor, de codi
 
 Espero que os guste todo el proyecto que voy a ir  realizando con este juego desde que termine los tutoriales hasta que desarrolle un juego completo de naves.
 
+#Notas
+##2- Creando la nave
+
+Un capitulo que simplemente muestra como crear la nave.
+##3- Camara y Luces.
+
+En las propiedades de la camara projection Ortographic para dar un aspecto mas de juego arcade sin pespertivas. 
+
+
+
+
+
  
