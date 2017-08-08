@@ -48,6 +48,15 @@ Creando los limites de la escena para todo objeto que se salga de la escena se d
 
 Creando un asteroide que vamos a utilizar en nuestro juego.  
 
+## 10. Añadiendo explosiones 
+
+Aqui me he dado cuenta de un error, y es que al objeto Player hay que ponerle la propiedad dentro de Rigidbody en is trigger, para que funcione la colision del objeto contra el asteroide.
+Si no, no funcionara y reborara. 
+
+También hay que añadir la explosión del jugador cuando colisiona el asteroide con la nave del jugador. Hay que instanciar los asteroides que los gestionaremos en el siguiente capitulo con el GameController.
+
+
+
 
 
 
