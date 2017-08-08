@@ -74,6 +74,10 @@ Aqui hemos creado este objeto GameController para generar los asteorides y gesti
 
 Aqui generamos los asteorides, y ademas elegimos el tiempo de espera, cuantos asteoides y cada cuanto tiempo apareceran el numero de asteroides como en olas de asteroides.
 
+## 13. Musica y SFX (Efectos de sonido)
+
+Aqui veremos como poner la musica y los efectos de sonido, también como funciona el tema del sonido en Unity3d y programandolo también, según te interese pues asi se hace el añadir sonidos.
+
 
 
 

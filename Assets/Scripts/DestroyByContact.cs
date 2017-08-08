@@ -13,7 +13,7 @@ public class DestroyByContact : MonoBehaviour {
         //Debug.Log(other.name);
         //if (other.tag == "Boundary") return;
         if (other.CompareTag("Boundary")) return;
-        Debug.Log(other.name);
+        //Debug.Log(other.name);
         Instantiate(explosion, transform.position, transform.rotation);
         if (other.CompareTag("Player"))
         {

@@ -21,10 +21,12 @@ public class PlayerController : MonoBehaviour {
     public Transform shotSpawn;
     public float fireRate;
     private float nextFire;
+    private AudioSource audioSource;
     // Use this for initialization
     private void Awake()
     {
         rig = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,8 +36,9 @@ public class PlayerController : MonoBehaviour {
             nextFire = Time.time + fireRate;
             //si cambiamos shotSpawn.rotation por Quaternion.identity lo pondremos a 0 la rotacion 
             Instantiate(shot, shotSpawn.position, Quaternion.identity);
+            audioSource.Play();
         }
-
+    
 	}
     private void FixedUpdate()
     {
