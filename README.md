@@ -83,6 +83,9 @@ Aqui veremos como poner la musica y los efectos de sonido, también como funcion
 Añadiremos puntuacion por cada asteroide que se destruya, el GameController no lo podemos asignar desde la escena a un objeto prefabs ya que el objeto prefabs no existe en toda la escena, solo existe en un momento, 
 determinado cuando explota el asteroide o explotanuestra nave. Por tanto no nos dejara nunca asignarselo, lo tendremos que asignar por codigo.
 
+## 15. Gamer Over 
+
+Aparece Game Over y tambien configuramos la tecla R en el metodo GameController.Update() para poder reiniciar la partida en realidad estamos reiniciando la escena. 
 
 
 
