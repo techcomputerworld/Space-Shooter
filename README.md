@@ -78,6 +78,10 @@ Aqui generamos los asteorides, y ademas elegimos el tiempo de espera, cuantos as
 
 Aqui veremos como poner la musica y los efectos de sonido, también como funciona el tema del sonido en Unity3d y programandolo también, según te interese pues asi se hace el añadir sonidos.
 
+## 14. Marcador de puntuación 
+
+Añadiremos puntuacion por cada asteroide que se destruya, el GameController no lo podemos asignar desde la escena a un objeto prefabs ya que el objeto prefabs no existe en toda la escena, solo existe en un momento, 
+determinado cuando explota el asteroide o explotanuestra nave. Por tanto no nos dejara nunca asignarselo, lo tendremos que asignar por codigo.
 
 
 

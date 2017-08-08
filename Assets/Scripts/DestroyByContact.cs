@@ -7,6 +7,20 @@ public class DestroyByContact : MonoBehaviour {
     public GameObject explosion;
     public GameObject playerExplosion;
 
+    public int scoreValue;
+    private GameController gameController;
+
+    //vamos a realizar una pequeña prueba y vamos a instanciar el objeto GameController en el metodo Awake despues de hacerlo en el Start 
+    private void Start()
+    {
+       
+        gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        //a mi me  gusta trabajar mejor con una sola linea que con varias para hacer lo mismo, esto tb se puede escribir asi
+        //GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        //gameController = gameControllerObject.GetComponent<GameController>();
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         
@@ -19,7 +33,7 @@ public class DestroyByContact : MonoBehaviour {
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
         }
-        
+        gameController.AddScore(scoreValue);
         Destroy(other.gameObject);
         Destroy(gameObject);
     }

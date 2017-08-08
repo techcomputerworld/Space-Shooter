@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -10,8 +11,13 @@ public class GameController : MonoBehaviour {
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    //la score solo la vamos a manejar desde esta clase y no hace falta manipular su valor desde el inspector. Por tanto mejor private. 
+    private int score;
+    public Text scoreText;
 	// Use this for initialization
 	void Start () {
+        score = 0;
+        updateScore();
         StartCoroutine(SpawnWaves());
 	}
 	
@@ -37,4 +43,15 @@ public class GameController : MonoBehaviour {
         
         
 	}
+
+    public void AddScore(int value)
+    {
+        score += value;
+        updateScore();
+    }
+
+    void updateScore()
+    {
+        scoreText.text = "Score: " + score;
+    }
 }
