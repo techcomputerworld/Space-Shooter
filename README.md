@@ -4,6 +4,8 @@
 
 ## Este juego esta basado en Hagamos videojuegos! tutorial en [hagamos videojuegos!](https://youtu.be/tkCupej0j7o?list=PLREdURb87ks3rXXhx2MWERiNTVcG_y_1v)
 
+## This game is based on the Unity3D tutorial [Space Shooter](https://unity3d.com/es/learn/tutorials/projects/space-shooter-tutorial)
+
 
 # Descripción
 Mi idea es desarrollar toda esta serie de tutoriales hasta que tengamos el videojuego acabado, una vez acabado el videojuego, me dispondria a mejorarlo, a quien le apetezca una vez 
@@ -13,6 +15,15 @@ master.
 Cuando el juego este finalizado pienso desarrollar un juego mucho mejor, de codigo libre si acaso lo publicare para Smartphone Android, iOS y ordenadores personales, Windows, Mac OS X y Linux.
 
 Espero que os guste todo el proyecto que voy a ir  realizando con este juego desde que termine los tutoriales hasta que desarrolle un juego completo de naves.
+
+#Description 
+
+My idea is develop every thing serie tutorial, Once the video game is finished, I would be prepared to improve it, whoever wants to do it once
+Finished to improve it I will be willing to accept the possible improvements, meanwhile the idea is to develop the tutorials and when they are finished I will put everything in the branch.
+
+When the game is finalized I think I will develop a much better game, free code and maybe I will publish it for android Smartphone, iOS and personal computers, Windows, Mac OS X and Linux.
+
+I hope you like the whole project that I will be doing with this game from the end of the tutorials, I develop videogame complete of ships.
 
 # Notas
 
@@ -58,6 +69,10 @@ También hay que añadir la explosión del jugador cuando colisiona el asteroide
 ## 11. GameController
 
 Aqui hemos creado este objeto GameController para generar los asteorides y gestionar diversos aspectos del videojuego, que se iran viendo conforme se va avanzando en el tutorial, como el marcador.
+
+## 12. Generando asteroides
+
+Aqui generamos los asteorides, y ademas elegimos el tiempo de espera, cuantos asteoides y cada cuanto tiempo apareceran el numero de asteroides como en olas de asteroides.
 
 
 
