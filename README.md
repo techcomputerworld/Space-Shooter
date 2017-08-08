@@ -55,6 +55,9 @@ Si no, no funcionara y reborara.
 
 También hay que añadir la explosión del jugador cuando colisiona el asteroide con la nave del jugador. Hay que instanciar los asteroides que los gestionaremos en el siguiente capitulo con el GameController.
 
+## 11. GameController
+
+Aqui hemos creado este objeto GameController para generar los asteorides y gestionar diversos aspectos del videojuego, que se iran viendo conforme se va avanzando en el tutorial, como el marcador.
 
 
 
