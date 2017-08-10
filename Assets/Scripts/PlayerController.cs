@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 [System.Serializable]
 public class Boundary
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetButton("Fire1") && Time.time > nextFire)
+		if (CrossPlatformInputManager.GetButton("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             //si cambiamos shotSpawn.rotation por Quaternion.identity lo pondremos a 0 la rotacion 
@@ -43,9 +44,8 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         //Para mover en horizontal  la nave, el boton negativo izquierda y positivo derecha. valores entre -1 y 1, 0 si no estamos pulsando boton
-        float moveHorizontal = Input.GetAxis("Horizontal");
-
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+        float moveVertical = CrossPlatformInputManager.GetAxis("Vertical");
         //prefiero multiplicar speed por cada vector que necesto moveHorizontal y moveVertical, asi me ahorro multiplicar por 0f.
         Vector3 movement = new Vector3(moveHorizontal * speed, 0f, moveVertical * speed);
         rig.velocity = movement;

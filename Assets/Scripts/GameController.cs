@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameController : MonoBehaviour {
 
     public GameObject asteroidHazard;
@@ -16,16 +17,23 @@ public class GameController : MonoBehaviour {
     private int score;
     public Text scoreText;
 
+    //restartTxt es la variable para activar o desactivar el texto
     public Text restartText;
+    private bool restartTxt;
+    
+    public GameObject restartGameObject;
     private bool restart;
-    public Text gameOverText;
+    public GameObject gameOverGamwObject;
     private bool gameOver;
 	// Use this for initialization
 	void Start () {
         restart = false;
+        restartGameObject.SetActive(false);
+        //vamos a controlar tambien el texto de restart 'R'
+        restartTxt = false;
         restartText.gameObject.SetActive(false);
         gameOver = false;
-        gameOverText.gameObject.SetActive(false);
+        gameOverGamwObject.SetActive(false);
 
         score = 0;
         updateScore();
@@ -36,11 +44,17 @@ public class GameController : MonoBehaviour {
         if (restart && Input.GetKeyDown(KeyCode.R))
         {
             //aqui tenemos varias maneras de cargar una escena con el nombre "Main" o el index que es el numero en el buildsetting o las de abajo.
-            SceneManager.LoadScene("Main");
+            
+            Restart();
             //otra forma de hacerlo es obtener la escena que tenemos actualmente cargada 
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+    //esta forma de hacerlo no la veo logica no me gusta, tendre que ver otra forma de hacerlo, lo mismo controlando el boton desde el private void Update()
+    public void Restart()
+    {
+        SceneManager.LoadScene("Main");
     }
     // Update is called once per frame
     //Metodo para instanciar los asteroides de momento
@@ -63,8 +77,13 @@ public class GameController : MonoBehaviour {
 
             if (gameOver)
             {
-                restartText.gameObject.SetActive(true);
+                restartGameObject.SetActive(true);
                 restart = true;
+                //Esto de restartTxt y restartText.gameObject solo lo usare en la version de PC (Windows, Linux y Mac OS X)
+                
+                
+                restartTxt = true;
+                restartText.gameObject.SetActive(true);
                 break;
             }
         }
@@ -84,7 +103,7 @@ public class GameController : MonoBehaviour {
     }
     public void GameOver()
     {
-        gameOverText.gameObject.SetActive(true);
+        gameOverGamwObject.SetActive(true);
         gameOver = true;
         
     }

@@ -87,7 +87,8 @@ determinado cuando explota el asteroide o explotanuestra nave. Por tanto no nos 
 
 Aparece Game Over y tambien configuramos la tecla R en el metodo GameController.Update() para poder reiniciar la partida en realidad estamos reiniciando la escena. 
 
+## 16. Joystick virtual 
 
-
+Creamos un Joystick virtual en la pantalla con un boton para jugar a nuestro juego en Smartphone.
 
  
