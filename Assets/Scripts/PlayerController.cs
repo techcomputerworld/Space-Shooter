@@ -29,7 +29,30 @@ public class PlayerController : MonoBehaviour {
         rig = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
+    
+    private void Start()
+    {
+        //actualizaremos los limites dependiendo de la resolucion de pantalla. 
+        UpdateBoundary();
+    }
+    
+    void UpdateBoundary()
+    {
+        Vector2 half = Utils.GetHalfDimensionsInWorldUnits();
 
+        //xMin -6 
+        //xMax 6 
+        //zMin -4
+        //zMax 8 
+
+        boundary.xMin = -half.x + 0.7f;
+        boundary.xMax = half.x - 0.7f;
+        boundary.zMin = -half.y + 6.8f;
+        boundary.zMax = half.y - 2f;
+        Debug.Log(half);
+
+    }
+    
     // Update is called once per frame
     void Update () {
 		if (CrossPlatformInputManager.GetButton("Fire1") && Time.time > nextFire)

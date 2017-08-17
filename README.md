@@ -92,3 +92,6 @@ Aparece Game Over y tambien configuramos la tecla R en el metodo GameController.
 Creamos un Joystick virtual en la pantalla con un boton para jugar a nuestro juego en Smartphone.
 
  
+## 17. Arreglando problemas 
+
+Arreglando ciertos problemas de por donde aparecen los asteroides, y la relacion de aspecto y resoluciones para poder jugar con otras relaciones de aspecto.

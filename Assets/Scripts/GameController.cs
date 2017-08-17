@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,7 @@ public class GameController : MonoBehaviour {
     private bool gameOver;
 	// Use this for initialization
 	void Start () {
+        UpdateSpawnValues();
         restart = false;
         restartGameObject.SetActive(false);
         //vamos a controlar tambien el texto de restart 'R'
@@ -39,6 +41,14 @@ public class GameController : MonoBehaviour {
         updateScore();
         StartCoroutine(SpawnWaves());
 	}
+
+    private void UpdateSpawnValues()
+    {
+        Vector2 half = Utils.GetHalfDimensionsInWorldUnits();
+        spawnValues = new Vector3(half.x - 0.7f, 0f, half.y + 5.5f);
+        Debug.Log(half);
+    }
+
     private void Update()
     {
         if (restart && Input.GetKeyDown(KeyCode.R))
@@ -67,7 +77,7 @@ public class GameController : MonoBehaviour {
         {
             for (int i = 0; i < asteroidHazardCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Instantiate(asteroidHazard, spawnPosition, Quaternion.identity);
                 //ejecutar la instruccion que detiene la courutine 
                 yield return new WaitForSeconds(spawnWait);
