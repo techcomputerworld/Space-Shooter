@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject asteroidHazard;
+    public GameObject[] asteroidHazard;
     public Vector3 spawnValues;
     public int asteroidHazardCount;
     public float spawnWait;
@@ -77,8 +77,10 @@ public class GameController : MonoBehaviour {
         {
             for (int i = 0; i < asteroidHazardCount; i++)
             {
+                
+                GameObject asteroidHazards = asteroidHazard[UnityEngine.Random.Range(0, asteroidHazard.Length)];
                 Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-                Instantiate(asteroidHazard, spawnPosition, Quaternion.identity);
+                Instantiate(asteroidHazards, spawnPosition, Quaternion.identity);
                 //ejecutar la instruccion que detiene la courutine 
                 yield return new WaitForSeconds(spawnWait);
 
@@ -90,8 +92,6 @@ public class GameController : MonoBehaviour {
                 restartGameObject.SetActive(true);
                 restart = true;
                 //Esto de restartTxt y restartText.gameObject solo lo usare en la version de PC (Windows, Linux y Mac OS X)
-                
-                
                 restartTxt = true;
                 restartText.gameObject.SetActive(true);
                 break;

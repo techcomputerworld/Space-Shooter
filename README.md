@@ -95,3 +95,12 @@ Creamos un Joystick virtual en la pantalla con un boton para jugar a nuestro jue
 ## 17. Arreglando problemas 
 
 Arreglando ciertos problemas de por donde aparecen los asteroides, y la relacion de aspecto y resoluciones para poder jugar con otras relaciones de aspecto.
+
+## 18. Nuevos asteorides 
+
+Hemos añadido asteroides de distintas clases usando el mismo GameObject solamente cambiando la imagen y hemos hecho que funcione, perfectamente la aparoicion aleatoria de los asteroides.
+
+## 19. Scroll Parallax
+
+Hemos añadido el efecto scroll parallax en el fondo con estrellas usando sistema de particulas.
+
