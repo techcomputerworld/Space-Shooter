@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
         boundary.xMax = half.x - 0.7f;
         boundary.zMin = -half.y + 6.8f;
         boundary.zMax = half.y - 2f;
-        Debug.Log(half);
+        //Debug.Log(half);
 
     }
     

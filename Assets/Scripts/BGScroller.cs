@@ -18,6 +18,6 @@ public class BGScroller : MonoBehaviour {
     void Update() {
         float newPosition = Mathf.Repeat(Time.time * scrollSpeed, titleSize);
         transform.position = startPosition + Vector3.forward * newPosition;
-        Debug.Log(newPosition);
+        //Debug.Log(newPosition);
 	}
 }

@@ -104,3 +104,28 @@ Hemos añadido asteroides de distintas clases usando el mismo GameObject solamen
 
 Hemos añadido el efecto scroll parallax en el fondo con estrellas usando sistema de particulas.
 
+## 20. Nave enemiga 
+
+Creación de la nave enemiga. 
+
+## 21. Disparo enemigo 
+
+Creación del disparo enemigo, 
+
+## 22. Maniobras evasivas 
+
+Creación de algunas maniobras evasivas. 
+
+Hasta aquí son todos los capitulos desarrollados en el tutorial citado arriba. 
+
+Mi idea es desarrollar a partir de aqui un videojuego con le motor Unity3D mejorando este juego hasta que se pueda decir que tenga la calidad de un juego comercial, como por ejemplo el mitico 1942, o algunos videojuegos de naves de la epoca, todavia se siguen desarrollando videojuegos de naves, asi que si os animais a ayudarme en esta ardua tarea, se agradece. 
+
+Eso si creare otra rama que sera como una rama de desarrollo para no tocar la master y hasta que en la rama de desarrollo no funcione las nuevas funcionaliades añadidas del videojuego no se pondran en la rama master. 
+
+Lo mismo creo otra rama testing una vez desarrolladas las caracteristicas se prueban en la testing pero bueno ya veriamos.
+
+## Versiones Space Shooter
+
+Version 0.1 Alpha SpaceShooter esta seria versión en la que se encuentra el juego. Esta ahora mismo tal cual terminado el tutorial. 
+
+
