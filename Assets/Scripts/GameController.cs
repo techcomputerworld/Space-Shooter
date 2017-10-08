@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour {
     private bool gameOver;
 	// Use this for initialization
 	void Start () {
-        UpdateSpawnValues();
+        //UpdateSpawnValues();
         restart = false;
         restartGameObject.SetActive(false);
         //vamos a controlar tambien el texto de restart 'R'
@@ -41,16 +41,23 @@ public class GameController : MonoBehaviour {
         updateScore();
         StartCoroutine(SpawnWaves());
 	}
-
+    /*
     private void UpdateSpawnValues()
     {
+        //si half tiene un valor distinto en free aspect o en la resolucion que he cogido para el juego tendria que plantearme cambiar estos valores para que el width lo cogiera
+        //por poner un ejemplo del objeto Background y solo poder generar objetos dentro de ese objeto, asi se solucionaria el problema
         Vector2 half = Utils.GetHalfDimensionsInWorldUnits();
         spawnValues = new Vector3(half.x - 0.7f, 0f, half.y + 5.5f);
         Debug.Log(half);
     }
-
+    */
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("saliendo del juego");
+        }
         if (restart && Input.GetKeyDown(KeyCode.R))
         {
             //aqui tenemos varias maneras de cargar una escena con el nombre "Main" o el index que es el numero en el buildsetting o las de abajo.

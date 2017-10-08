@@ -33,9 +33,9 @@ public class PlayerController : MonoBehaviour {
     private void Start()
     {
         //actualizaremos los limites dependiendo de la resolucion de pantalla. 
-        UpdateBoundary();
+        //UpdateBoundary();
     }
-    
+    /*
     void UpdateBoundary()
     {
         Vector2 half = Utils.GetHalfDimensionsInWorldUnits();
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
         boundary.zMax = half.y - 2f;
         //Debug.Log(half);
 
-    }
+    }*/
     
     // Update is called once per frame
     void Update () {
